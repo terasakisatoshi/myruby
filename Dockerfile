@@ -25,7 +25,7 @@ RUN pip3 install \
     jupyterlab_code_formatter
 
 RUN jupyter notebook --generate-config && echo "\
-c.ContentsManager.default_jupytext_formats = 'ipynb,py'\n\
+c.ContentsManager.default_jupytext_formats = 'ipynb,rb'\n\
 c.NotebookApp.contents_manager_class = 'jupytext.TextFileContentsManager'\n\
 c.NotebookApp.open_browser = False\n\
 " >> ${HOME}/.jupyter/jupyter_notebook_config.py
