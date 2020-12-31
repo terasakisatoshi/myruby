@@ -17,7 +17,7 @@ RUN gem install ffi-rzmq && \
 
 RUN pip3 install \
     jupyter \
-    jupyterlab \
+    jupyterlab==2.* \
     jupytext \
     ipywidgets \
     jupyter-contrib-nbextensions \
