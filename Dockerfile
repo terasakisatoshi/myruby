@@ -57,6 +57,21 @@ RUN mkdir -p ${HOME}/.jupyter/lab/user-settings/@ryantam626/jupyterlab_code_form
 \
 '>> ${HOME}/.jupyter/lab/user-settings/@ryantam626/jupyterlab_code_formatter/settings.jupyterlab-settings
 
+# assign `Alt-R` to restart run all command 
+RUN mkdir -p /root/.jupyter/lab/user-settings/@jupyterlab/shortcuts-extension && echo '\
+{\n\
+    "shortcuts": [\n\
+        {\n\
+            "command": "runmenu:restart-and-run-all",\n\
+            "keys": [\n\
+                "Alt R"\n\
+            ],\n\
+            "selector": "[data-jp-code-runner]"\n\
+        }\n\
+    ]\n\
+}\n\
+' >> /root/.jupyter/lab/user-settings/@jupyterlab/shortcuts-extension/shortcuts.jupyterlab-settings
+
 # Set color theme Monokai++ by default (The selection is due to my hobby)
 RUN mkdir -p ${HOME}/.jupyter/lab/user-settings/@jupyterlab/apputils-extension && echo '\
 {\n\
